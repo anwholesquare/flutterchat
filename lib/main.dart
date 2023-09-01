@@ -83,17 +83,20 @@ class _MyHomePageState extends State<MyHomePage> {
               autocorrect: false,
           ),
           showUserNames: true,
+          
 
           emptyState: const Center(child:Text("No Message\n Send a message now!", textAlign: TextAlign.center,)),
-          theme: const DefaultChatTheme(
+          theme:  DefaultChatTheme(
             backgroundColor:  Color.fromARGB(255, 229, 229, 229),
-            inputBackgroundColor: Colors.black,
             inputBorderRadius: BorderRadius.all(Radius.circular(20)),
-            //inputMargin: EdgeInsets.all(20),
-            inputPadding: EdgeInsets.all(20),
+            inputMargin: const EdgeInsets.only(left: 20, right: 20, bottom: 40),
+            inputPadding: const EdgeInsets.all(20),
+            inputContainerDecoration: BoxDecoration(
+              color: Colors.blueAccent,
+              borderRadius: BorderRadius.circular(20),
+            ),
             
-            
-            primaryColor: Colors.black,
+            primaryColor: Colors.blueAccent,
             userNameTextStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
             secondaryColor: Colors.white,
             userAvatarNameColors: [Colors.black],
